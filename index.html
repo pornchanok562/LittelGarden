@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Little Garden</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="window-container">
+    <!-- Title Bar for drag and controls -->
+    <div class="title-bar">
+      <div class="title-text">Little Garden</div>
+      <div class="window-controls">
+        <button id="btn-minimize" class="title-btn" title="Minimize">
+          <img src="button/MinimizeButton.png" alt="Minimize" />
+        </button>
+        <button id="btn-close" class="title-btn" title="Close">
+          <img src="button/ExitButton.png" alt="Close" />
+        </button>
+      </div>
+    </div>
+
+    <!-- App Views Content -->
+    <div class="app-content">
+
+      <!-- View 1: Welcome / Start Screen -->
+      <section id="view-start" class="view active">
+        <div class="start-bg-canvas" id="start-animated-bg"></div>
+        <div class="start-overlay-click" id="btn-goto-choose">
+          <button class="pixel-btn click-start-btn">Click to start...</button>
+        </div>
+      </section>
+
+      <!-- View 2: Choose Tulip Screen -->
+      <section id="view-choose" class="view">
+        <div class="choose-container">
+          <h2 class="view-title">Choose your tulip.</h2>
+          <div class="flower-selector">
+            <button id="btn-prev-flower" class="nav-arrow">&lt;</button>
+            <div class="flower-preview-box">
+              <img id="choose-flower-img" src="tulips/pink.png" alt="Tulip Preview" />
+            </div>
+            <button id="btn-next-flower" class="nav-arrow">&gt;</button>
+          </div>
+          <div class="choose-actions">
+            <button id="btn-plant" class="pixel-btn pink-btn">Plant</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- View 3: Counting Timer Screen -->
+      <section id="view-timer" class="view">
+        <div class="timer-container">
+          <h2 class="view-title">Your tulips are growing</h2>
+          <div class="growth-display">
+            <img id="growing-flower-img" src="tulips/1.png" alt="Growing Plant" />
+          </div>
+          <div class="timer-bottom-box">
+            <div id="timer-display" class="timer-digits">25:00</div>
+            <button id="btn-stop-prompt" class="pixel-btn pink-btn stop-btn">Stop</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- View 4: Stop Confirmation Modal/View -->
+      <section id="view-stop-confirm" class="view">
+        <div class="confirm-container">
+          <h2 class="view-title confirm-title">Are you sure <br>you want to stop?</h2>
+          <div class="growth-display">
+            <img id="confirm-flower-img" src="tulips/4.png" alt="Current Flower State" />
+          </div>
+          <div class="timer-bottom-box">
+            <div id="confirm-timer-display" class="timer-digits warning-digits">24:30</div>
+            <div class="confirm-btn-row">
+              <button id="btn-confirm-cancel" class="pixel-btn white-btn">Cancel</button>
+              <button id="btn-confirm-sure" class="pixel-btn red-btn">Sure</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- View 5: Time Up / Finish Screen -->
+      <section id="view-finish" class="view">
+        <div class="finish-container">
+          <div class="banner-box">
+            <img src="flag.png" class="flag-banner" alt="Banner" />
+            <span class="banner-text">Your tulips <br>have grown.</span>
+          </div>
+          <div class="growth-display finished-sparkle">
+            <img id="finished-flower-img" src="tulips/pinkdone1.png" alt="Fully Grown Flower" />
+          </div>
+          <div class="finish-actions">
+            <button id="btn-done" class="pixel-btn pink-btn done-btn">Done</button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

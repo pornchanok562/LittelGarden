@@ -1,0 +1,21 @@
+{
+  "name": "little-garden",
+  "version": "1.0.0",
+  "description": "Little Garden - Flower Growing Focus/Pomodoro Timer",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "electron",
+    "pomodoro",
+    "timer",
+    "pixel-art",
+    "garden"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^33.2.1"
+  }
+}
