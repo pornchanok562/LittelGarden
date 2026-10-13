@@ -2,10 +2,6 @@
 
 > A cozy pixel-art Pomodoro & Focus Timer desktop application built with Electron. Grow your own flowers while staying productive! 🌷✨
 
-<p align="center">
-  <img src="ScreenShots/UI_start.png" alt="Little Garden Start Screen" width="480" />
-</p>
-
 ---
 
 ## 📖 About The Project
